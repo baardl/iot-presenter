@@ -43,6 +43,7 @@ var optionsbli =
     }]
 };
 */
+/*
 var chart;
 
 $(function () {
@@ -101,6 +102,7 @@ $(function () {
     });
 
 });
+*/
 
 
 function updateTemperature(temperature) {
@@ -124,6 +126,7 @@ function onMessage(evt) {
         var payload = data.payload;
 
         //addToGraph(payload);
+        updatePresentation(payload);
         writeToScreen(evt.data);
 
     } catch (e){
