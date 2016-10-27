@@ -5,6 +5,9 @@ var websocket = new WebSocket(wsUri);
 websocket.onmessage = function(evt) { onMessage(evt) };
 websocket.onerror = function(evt) { onError(evt) };
 websocket.onopen = function(evt) { onOpen(evt) };
+websocket.onclose = function(evt) {onClose(evt)};
+
+var interval;
 /*
 var optionsbli =
 {
@@ -142,6 +145,16 @@ function onError(evt) {
 function onOpen() {
     writeToScreen("<b>Connected</b> to " + wsUri);
     websocket.send("subscribe device baardlTI");
+    websocket.send("subscribe device 4d6e848e-d99e-40c7-9c61-1744c525bfd8-de44fce1-ecb3-483d-ac22-113a3269bfc1");
+    interval= setInterval(wsPing,1000);
+}
+function onClose(evt) {
+    writeToScreen("<b>Disconnected</b> from " + wsUri);
+    writeToScreen('<span style="color: red;">ERROR:</span> ' + evt.data);
+}
+
+function wsPing(){
+    websocket.send("ping");
 }
 
 
