@@ -123,7 +123,7 @@ function onMessage(evt) {
         var data = JSON.parse(evt.data);
         var payload = data.payload;
 
-        addToGraph(payload);
+        //addToGraph(payload);
         writeToScreen(evt.data);
 
     } catch (e){
@@ -138,7 +138,7 @@ function onError(evt) {
 
 function onOpen() {
     writeToScreen("<b>Connected</b> to " + wsUri);
-    websocket.send("subscribe device 4d6e848e-d99e-40c7-9c61-1744c525bfd8-de44fce1-ecb3-483d-ac22-113a3269bfc1");
+    websocket.send("subscribe device baardlTI");
 }
 
 
