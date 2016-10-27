@@ -1,0 +1,12 @@
+server:
+    port: 1969
+    contextPath: /iot-presenter
+security:
+  oauth2:
+    client:
+      clientId: IOT-PRESENTER
+      clientSecret: TODO
+      accessTokenUri: https://cleanair.dev.id.telianext.com/realms/telia/protocol/openid-connect/token
+      userAuthorizationUri: https://cleanair.dev.id.telianext.com/realms/telia/protocol/openid-connect/auth
+    resource:
+      userInfoUri: https://cleanair.dev.id.telianext.com/realms/telia/protocol/openid-connect/userinfo

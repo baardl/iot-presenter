@@ -1,0 +1,217 @@
+code {
+    font-size: 16px;
+}
+
+.sg {
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+}
+
+.sg-header__content {
+    margin: 0 auto;
+    max-width: 60em;
+    padding: .5rem;
+    position: relative;
+}
+
+.sg-header__content:before,
+.sg-header__content:after {
+    content: ' ';
+    display: table;
+}
+
+.sg-header__content:after {
+    clear: both;
+}
+
+.sg-header__bar {
+    background-color: #990ae3;
+    color: white;
+}
+
+.sg-header__brand {
+    left: .5rem;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.sg-header__actions {
+    float: right;
+}
+
+.sg-header__title {
+    font-family: 'pebble', Arial, sans-serif;
+    font-size: 1.5rem;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.sg-header__menu-toggler,
+.sg-header__menu {
+    display: none;
+}
+
+.sg-header__menu {
+    background-color: white;
+}
+
+.sg-header__menu-toggler:checked ~ .sg-header__menu {
+    display: block;
+}
+
+.sg-header__sections {
+    background-color: white;
+    color: black;
+}
+
+.sg-header__section {
+    margin-top: 2rem;
+}
+
+.sg-header__section:first-child {
+    margin-top: 0;
+}
+
+.sg-header__section-title {
+    font-family: 'pebble', Arial, sans-serif;
+    font-size: 1.25rem;
+    margin: 0;
+    padding-bottom: .5rem;
+    text-transform: uppercase;
+}
+
+.sg-header__module,
+.sg-header__module:visited {
+    color: #990ae3;
+    display: inline-block;
+    line-height: 2;
+    margin-right: 1rem;
+    text-decoration: none;
+}
+
+.sg-header__module:focus,
+.sg-header__module:hover {
+    text-decoration: underline;
+}
+
+.sg-components__content {
+    max-width: 60em;
+    margin: 0 auto;
+}
+
+.sg-component {
+    background-color: white;
+    border: 1px solid #ccc;
+    margin: 0.5rem 0;
+    overflow: hidden;
+    padding: 1rem;
+    position: relative;
+}
+
+.sg-component-status {
+    position: absolute;
+    top: 30px;
+    right: -30px;
+    width: 150px;
+    height: 25px;
+    background: #EE8E4A;
+    text-align: center;
+    font-size: 13px;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #fff;
+    line-height: 27px;
+    transform: rotate(45deg);
+}
+.sg-component-status--not-started {
+    background: white;
+    border: solid 1px black;
+    color: black;
+}
+.sg-component-status--in-progress {
+    background: #EE8E4A;
+}
+.sg-component-status--beta {
+    background: repeating-linear-gradient(
+        -45deg,
+        #EE8E4A,
+        #EE8E4A 10px,
+        #4F8A10 10px,
+        #4F8A10 20px
+    );
+}
+.sg-component-status--approved {
+    background: #4F8A10;
+}
+.sg-component-status--deprecated {
+    background: #999999;
+}
+
+.sg-component-variation-html-container {
+    border: 1px solid #ccc;
+    margin: 1rem 0;
+    padding: 1rem;
+}
+
+.sg-component-variation-html {
+    background-color: #f2f2f2;
+    border: 1px dashed #ccc;
+    display: none;
+    margin: 1em 0;
+    overflow: auto;
+    padding: 0.5em;
+}
+
+.sg-component-variation-html .prettyprint {
+    margin: 0;
+}
+
+.sg-component__html-toggler {
+    display: none;
+}
+
+.sg-component__html-toggler:checked ~ .sg-component-variation-html {
+    display: block;
+}
+
+.sg-warning {
+    color: red;
+}
+
+.sg-component-props__react-docs-toggler {
+    display: none;
+}
+
+.sg-component-props__react-docs-toggler:checked ~ .sg-component-props {
+    display: block;
+}
+
+.sg-component-props-container {
+    border: 1px solid #ccc;
+    padding: 1rem;
+}
+
+.sg-component-props {
+    display: none;
+    margin-top: 2em;
+}
+
+.sg-component-prop {
+    border-bottom: 1px solid #ccc;
+}
+
+.sg-component-prop:last-child {
+    border: none;
+}
+
+.sg-component-prop-name {
+    font-weight: bold;
+}
+
+.sg-component-prop-required {
+    font-weight: normal;
+    float: right;
+}
